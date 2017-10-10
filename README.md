@@ -1,14 +1,16 @@
 # Web structure similarity calculation using three methods:
+To understand the specific meaning of each method, see the paper from [Gottron],
+Clustering Template Based Web Documents at ECIR conference, 2008.
 
-## TV algorithm: using this label vector method, counting how many times each
-## possible tag appears convert the document D in a vector v(D) of fixed
-## dimension N as the number of possible tags is limited.
+## TV algorithm:
+A label vector method for counting how many times each possible tag appears, which
+converts the document D in a vector v(D) of fixed dimension N as the number of
+possible tags is limited.
 
-## LCTS, the longest public tag sub-sequence method. ### The distance of two
-## documents can be expressed based on their longest common tag subsequence.
+## LCTS
+The longest public tag sub-sequence method uses the distance of two documents
+expressed based on their longest common tag subsequence.
 
-## CTSS, public tag sequence shingle method. ### To overcome the computational
-## costs of the previous distance method, this method uses shingling techniques.
-
-# Description ## Each method can go to the paper to understand what the specific
-# meaning. ## These methods are only used as a module for program processing.
+## CTSS
+The public tag sequence shingle method. Useful to overcome the computational costs of
+the previous distance techniques, as this method uses shingles.
