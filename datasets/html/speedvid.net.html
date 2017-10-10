@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<Title>Speedvid</Title>
+<script src="/cdn-cgi/apps/head/Epv-XBnsqK1iimfHm62woRI6bJE.js"></script><link rel="stylesheet" type="text/css" media="screen,projection,print" href="//neo.speedvid.net/cdn/css/reset.css">
+<link rel="shortcut icon" href="//neo.speedvid.net/cdn/images/icon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="//neo.speedvid.net/cdn/css/main.css">
+<link rel="stylesheet" type="text/css" href="//neo.speedvid.net/cdn/css/dataurl.css">
+<link href="//www.speedvid.net/jw7/bin/skins/flat.min.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" CHARSET="UTF-8" src="//neo.speedvid.net/cdn/js/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" CHARSET="UTF-8" src="//neo.speedvid.net/cdn/js/xupload.js"></script>
+<script language="JavaScript" type="text/javascript" CHARSET="UTF-8" src="//neo.speedvid.net/cdn/js/pace.min.js"></script>
+<meta name="propeller" content="061c94706061e60e73488e772ea21f7f" />
+<META http-equiv=Content-Type content="text-html; charset=UTF-8">
+<meta name="robots" content="noindex">
+<META NAME="description" CONTENT="Speedvid - Free file upload service">
+<META NAME="keywords" CONTENT="file upload,share files,free upload">
+<style type="text/css">
+body{background-color: #F5F5F5; font-family:Arial, Helvetica, sans-serif; letter-spacing:0px;}
+#container {
+    width: 982px;
+    padding: 0px;
+}
+.container{width:982px; margin:0px auto;}
+#lang ul{padding-top:8px;}
+#lang ul li{background:#363636;}
+#lang ul li a{color:#ffffff;}
+.admin{background:#000000; text-align:center; padding:5px 0px;}
+.admin a, .admin a:hover{color:#ffffff; font-family:Arial, Helvetica, sans-serif; letter-spacing:0px; padding-left:10px; padding-right:10px; text-decoration:none !important;}
+#main{padding:0px; border:0px; width:100%;}
+.main_box_left{margin-left:0px; margin-top:5px;}
+.box_wrap{border:0px;}
+.main_box_right{margin-right:0px;}
+.video_heading{background:#f0f0f0; height:41px; border-bottom:1px solid #d5d5d5; font-size:16px; color:#7f7f7f; font-family:Arial, Helvetica, sans-serif; font-weight:bold; text-align:left; line-height:41px; border-radius:5px 5px 0px 0px; padding-left:15px; letter-spacing:0px;margin:0px; margin-bottom:15px;}
+#tag_list a{background:#479fff; padding:12px 10px; font-family:'Candarab'; color:#ffffff; font-size:13px; border-radius:5px; display: inline-table;margin-top: 5px; margin-left:0px;}
+.box_hdr{background:transparent; color:#00a2e8; font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold;}
+#upload_div{width:930px;}
+.upload_slot {
+    width: 100%;
+    font-size: 14px;
+    color: #3a3a3a;
+    font-family: 'Arial';
+    background: none;
+    float: left;
+    border: 0px;
+}
+#divinputfile {
+    margin-bottom: 0px;
+    width: 499px;
+    height: 40px;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+	box-shadow: 0px 0px;
+    border-radius: 0px;
+    border: 1px solid #E0E0E0;
+    padding: 10px;
+}
+.upload_slot input:not([type="checkbox"]):not([type="radio"]), .upload_slot textarea{width:auto;}
+.btn_blue, input[type="button"], input[type="submit"]:hover{background-color:#36d8f3; font-family:'Candarab' !important; padding:10px 15px; font-size:16px !important; cursor:pointer}
+.btn_blue, input[type="button"], input[type="submit"]{background-color:#36d8f3; font-family:'Candarab' !important; padding:10px 15px; font-size:16px !important; cursor:pointer}
+.upload_slot select{border:1px solid #e0e0e0; padding:8px; border-radius:0px;}
+.vid_block{border-bottom: 1px solid #e6e6e6;margin-bottom: 15px;margin-left: 0;margin-right: 15px;padding-bottom: 15px;}
+.vb_title a.link b{color:#44abce; font-family:'Candarab'; font-size:14px;}
+html, body {
+    height: 100%;
+}
+html, body {
+    min-height: 100%;
+}
+#page {	
+    min-height: 70%; 
+    overflow: hidden;
+}
+.upload_block input[type="file"]
+</style>
+</HEAD>
+<BODY>
+
+<link rel="stylesheet" type="text/css" media="screen,projection,print" href="//neo.speedvid.net/cdn/css/mycloud.css">
+<link rel="stylesheet" type="text/css" media="screen,projection,print" href="//neo.speedvid.net/cdn/css/reset.css">
+<style type="text/css">
+
+
+
+.header {
+    background: #656565;
+    /* border-bottom: 2px #63CAEB solid; */
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 10px 15px 5px 15px;
+    z-index: 6;
+    height: 47px;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.inlineblock li, .inlineblock {
+    display: inline;
+    display: inline-block;
+}
+.absolute {
+    position: absolute;
+}
+body {
+    letter-spacing: 0px;
+}
+ol.headnav {
+    left: 240px;
+    top: 0px;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote {
+    margin: 0;
+    padding: 0;
+}
+div.bingbox {
+    top: 16px;
+    right: 250px;
+    width: 200px;
+}
+
+ol.headnav li a {
+    color: #FFF;
+    padding: 21px 15px;
+    border-bottom: 3px rgba(0,0,0,0) solid;
+	
+.animate {
+    transition: all 0.2s linear 0s;
+}
+
+media="screen, projection, print"
+.txtdecoration-no:hover, .txtdecoration-no {
+    text-decoration: none;
+}
+
+.fontn {
+    font-family: font_n,sans-serif,Tahoma;
+}
+
+.size13 {
+    font-size: 13px;
+}
+
+.size18 {
+    font-size: 18px;
+}
+
+
+
+a.inboxoff {
+    background-position: -140px -27px;
+    opacity: 1;
+}
+
+a.icdinbox {
+    width: 33px;
+    height: 28px;
+    right: 155px;
+    top: 0px;
+    border-radius: 2px;
+}
+
+.viewactype {
+    right: 0px;
+    background: #78C31A;
+    color: #fff;
+    border-radius: 100px;
+    padding: 5px 12px;
+    top: -2px;
+    border-bottom: 3px #6cb215 solid;
+}
+
+a.inboxoff div.redcount {
+    display: none;
+}
+
+.size9 {
+    font-size: 9px;
+}
+
+div.bingsp .binghead {
+    border-bottom: 1px #ddd solid;
+    padding: 6px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.relative {
+    position: relative;
+}
+
+div.bingsp a.seeall {
+    color: #07f;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 4px;
+    border-top: 1px #eee solid;
+    text-align: center;
+    box-shadow: 0px 0px 4px #eee;
+}
+
+
+.color333 {
+    color: #333333;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+div.bingsp .binghead a.markbingsread {
+    top: 6px;
+    right: 45px;
+    color: #07f;
+}
+
+div.bingsp .binghead a.closebing {
+    top: 0px;
+    right: 0px;
+    border-left: 1px #eee solid;
+    padding: 3px 11px 5px 11px;
+    color: #333;
+}
+
+
+div.iuserbox {
+    top: 10px;
+    right: 60px;
+    width: 165px;
+    border: 1px #E6E6E6 solid;
+    padding: 2px 2px 0px 3px;
+    border-radius: 30px;
+    height: 32px;
+}
+
+div.bingme {
+    right: -195px;
+    width: 400px;
+}
+
+
+.displaynone {
+    display: none;
+}
+
+#container {
+    margin: 78px auto 0px;
+}
+</style>
+<div class="header fixed">
+
+<a href="http://www.speedvid.net" class="icdlogo inlineblock absolute"><img src="//neo.speedvid.net/cdn/images/logo.png"></a>
+
+<ol class="headnav inlineblock absolute">
+<li><a href="/" style="text-decoration: none;" class="animate txtdecoration-no inlineblock size13 fontn active">Home</a></li>
+<li><a href="/?op=news" style="text-decoration: none;" class="animate txtdecoration-no  inlineblock size13 fontn">News</a></li>
+<li><a href="/make_money.html" style="text-decoration: none;" class="animate txtdecoration-no inlineblock size13 fontn">Make Money</a></li>
+</ol>
+
+<li id="lang">
+<ul style="margin-right: 260px;top: 2px;">
+<li class="top"><a href="/?op=change_lang&lang=">English <span class="trf trf-english"></span></a></li>
+<span class="dropdown">
+<li><a href="/?op=change_lang&lang=4">French <span class="trf trf-french"></span></a></li>
+
+</span>
+</ul>
+</li>
+<style type="text/css">
+.ibtn {
+    background: #03C1E3;
+    right: 50px;
+    padding: 8px 20px 8px 20px;
+    color: #fff;
+    border-radius: 22px;
+    top: 6px;
+    border-bottom: 3px #159BB3 solid;
+    font-size: 13px;
+}
+.ibtn:hover {
+    background: #03C1E3;
+    border-bottom: 3px #03C1E3 solid;
+    color: #fff;
+}
+</style>
+<div class="bingbox absolute" style="right: 50px;width: 230px;text-align: right;top: 13px;">
+<a href="/login.html" class="ibtn size13 fontb inlineblock txtdecoration-no animate" style="border-top-right-radius: 0px;border-bottom-right-radius: 0px;color: #ffffff;">Login</a><a href="/?op=registration" class="ibtn size13 inlineblock fontb txtdecoration-no animate" style="border-top-left-radius: 0px;border-bottom-left-radius: 0px;margin-left:2px;color: #ffffff;">Create Account</a>
+</div>
+</div>
+<div id="page">
+<div id="container" style="margin: 78px auto 0px;">
+<div id="main" style="margin-bottom: 33px ;">
+<Center>
+<style type="text/css">
+#container {
+    background: transparent !important;
+    border: 0px solid #D5D5D5 !important;
+    border-radius: 0px;
+    margin: 0px auto 0px;
+    padding: 0;
+    width: 100%;
+}
+#main{background-color:transparent !important;}
+.down_content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0px solid #D5D5D5;
+    border-radius: 0px;
+    margin-top: -26px;
+    padding: 0;
+    width: 100%;
+}
+
+
+.main-header {
+	display:none;
+	}
+
+</style>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/skins/colors/turquoise.css" name="colors">
+
+<link rel="stylesheet" href="css/layout/wide.css" name="layout">
+
+<link rel="stylesheet" href="css/switcher/style.css">
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+  <![endif]-->
+<style type="text/css">
+.services.home, .testimonial-item p, .one-page .home-bg, .one-page.home-bg {
+  background: #DBDBDB;
+}
+#wrap.boxed {
+  background: #DBDBDB;
+}
+</style>
+<div class="down_content" style="position: absolute;left: 0px;">
+<div style="text-align:left; width:100%;">
+<div id="wrap" class="boxed">
+<header>
+<div class="main-header">
+<div class="container clearfix">
+<div class="two-thirds column">
+<nav id="menu" class="navigation" role="navigation">
+<ul id="nav">
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<div class="slider-1 clearfix">
+<div class="flex-container">
+<div class="flexslider loading">
+<ul class="slides">
+<li style="background:url(images/img/sliders/slider-1/slider-bg-1.jpg) no-repeat;background-position:50% 0">
+<div class="container">
+<div class="sixteen columns contain">
+<h2 data-toptitle="20%">GET STARTED</h2>
+<p data-bottomtext="39%">
+Register so you can host and manage your videos simple and
+securely. Start uploading your videos
+and share them with who you want.</p>
+<div class="links" data-bottomlinks="20%">
+<a href="http://www.speedvid.net/login.html" class="button medium normal">Sign in</a>
+<a href="http://www.speedvid.net/?op=registration" style="color:#FFFFFF;" class="button medium color">Register Now</a>
+</div>
+<img src="images/img/sliders/slider-1/slider-item-1.png" class="item" data-topimage="16%" />
+</div>
+</div>
+</li>
+<li style="background:url(images/img/sliders/slider-1/slider-bg-3.jpg) no-repeat; background-position:50% 0">
+<div class="container">
+<div class="sixteen columns contain">
+<h2 data-toptitle="20%">Fast Downloads</h2>
+<p data-bottomtext="39%">
+Our systems are designed for high load and are able to offer fast downloads for every user.</p>
+<div class="links" data-bottomlinks="20%">
+<a href="http://www.speedvid.net/login.html" class="button medium normal">Sign in</a>
+<a href="http://www.speedvid.net/?op=registration" style="color:#FFFFFF;" class="button medium color">Register Now</a>
+</div>
+<img src="images/img/sliders/slider-1/slider-item-2.png" class="item" data-topimage="20%" margin-right="20%" />
+</div>
+</div>
+</li>
+<li style="background:url(images/img/sliders/slider-1/slider-bg-2.jpg) no-repeat; background-position:50% 0">
+<div class="container">
+<div class="sixteen columns contain">
+<h2 data-toptitle="20%">Enjoy your videos everywhere</h2>
+<p data-bottomtext="39%">
+Played makes your videos look great on any device,
+no matter the format or the internet connectivity.
+Access, share and manage them whenever you want, wherever you go.</p>
+<div class="links" data-bottomlinks="20%">
+<a href="http://www.speedvid.net/login.html" class="button medium normal">Sign in</a>
+<a href="http://www.speedvid.net/?op=registration" style="color:#FFFFFF;" class="button medium color">Register Now</a>
+</div>
+<img src="images/img/sliders/slider-1/slider-item-3.png" class="item" data-topimage="30%" />
+</div>
+</div>
+</li>
+<li style="background:url(images/img/sliders/slider-1/slider-bg-3.jpg) no-repeat; background-position:50% 0">
+<div class="container">
+<div class="sixteen columns contain">
+<h2 data-toptitle="20%">Easy sharing</h2>
+<p data-bottomtext="39%">
+Share you favorite videos with just one click. Instantly.
+And whether you share your video privately or publicly,
+your account always stays safe and secure.</p>
+<div class="links" data-bottomlinks="20%">
+<a href="http://www.speedvid.net/login.html" class="button medium normal">Sign in</a>
+<a href="http://www.speedvid.net/?op=registration" style="color:#FFFFFF;" class="button medium color">Register Now</a>
+</div>
+<div class="item" data-topimage="23%">
+<div class="video-wrap widescreen item">
+<img src="images/img/sliders/slider-1/slider-item-4.png" class="item" data-topimage="30%" />
+</div>
+
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="services style-1 home bottom-3">
+<div class="container clearfix">
+<div class="one-third column">
+<div class="item">
+<div class="circle"><a href="#"><img src="images/img/sliders/slider-1/free.png" class="item" /></a></div>
+<h3><a href="#">Totally free</a></h3>
+<p>Our service is totally free. No premium account</p>
+</div>
+</div>
+<div class="one-third column">
+<div class="item">
+<div class="circle"><a href="#"><i class="icon-cogs"></i></a></div>
+<h3><a href="#">No limits</a></h3>
+<p>There is no limit to your data usage, fast downloads and files are never deleted ! </p>
+</div>
+</div>
+<div class="one-third column">
+<div class="item">
+<div class="circle"><a href="#"><img src="images/img/sliders/slider-1/$.png" class="item" /></a></div>
+<h3><a href="#">Earn money</a></h3>
+<p>Join our affiliate program and start making money today. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+sdfsdfdfs
+
+<script src="js/jquery-1.9.1.min.js"></script> 
+<script src="js/jquery-ui/jquery.ui.widget.js"></script> 
+<script src="js/jquery-ui/jquery.ui.accordion.js"></script> 
+<script src="js/jquery-cookie.js"></script> 
+<script src="js/ddsmoothmenu.js"></script> 
+<script src="js/jquery.flexslider.js"></script> 
+<script src="js/colortip.js"></script> 
+<script src="js/tytabs.js"></script> 
+<script src="js/jquery.ui.totop.js"></script> 
+<script src="js/carousel.js"></script> 
+<script src="js/jquery.isotope.min.js"></script> 
+<script src="js/twitter/jquery.tweet.js"></script> 
+<script src="js/jflickrfeed.min.js"></script> 
+<script src="js/doubletaptogo.js"></script> 
+<script src="js/fancybox/jquery.fancybox.js"></script> 
+<script src="js/jquery.sticky.js"></script> 
+<script src="js/custom.js"></script> 
+
+</Center>
+</div>
+</div>
+</div>
+
+
+<style type="text/css">
+
+.ifooter {
+    background: #EAEAEA;
+    border-top: 1px solid #CCCCCC;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+	
+}
+.inlineblock0 li, .inlineblock0 {
+    display: inline;
+    display: inline-block;color: #333333; 
+	font-size: 13px;
+	transition: all 0.2s linear 0s;
+	font-family: font_n, sans-serif, Tahoma;
+	text-decoration: none;
+	height: 42px;
+}
+
+.ifooter .ftrnav li a {
+    padding: 10px 15px;
+}
+
+
+ol, ul, li {
+    list-style: none;
+}
+
+
+
+.ftrcopyright {
+    right: 15px;
+    bottom: 13px;
+}
+
+.absolute {
+    position: absolute;
+}
+
+
+.sociallinks {
+    right: 280px;
+    top: 7px;
+}
+
+.ifooter .ftrnav li a:hover {
+    background: #DEDEDE;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #8156a3;
+}
+
+.txtdecoration-no:hover, .txtdecoration-no {
+    text-decoration: none;
+}
+
+
+.sociallinks li a.ftrsocialicon {
+    width: 28px;
+    height: 28px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.sociallinks li .fbicon {
+    background: #3b5998;
+}
+
+.sociallinks li .twittericon {
+    background: #00c5f9;
+}
+
+</style>
+<div class="ifooter fixed ">
+<ul class="ftrnav inlineblock0">
+<li><a href="/" class="inlineblock0 size13 fontn color333 txtdecoration-no animate" style="color: #6B6B6B;padding-top:13px">Home</a></li>
+<li><a href="/?op=news" class="inlineblock0 size13 fontn color333 txtdecoration-no animate" style="color: #6B6B6B;padding-top:13px">News</a></li>
+<li><a href="/make_money.html" class="inlineblock0 size13 fontn color333 txtdecoration-no animate" style="color: #6B6B6B;padding-top:13px;">Make Money</a></li>
+
+<li><a href="/faq" class="inlineblock0 size13 fontn color333 txtdecoration-no animate" style="color: #6B6B6B;padding-top:13px;">FAQ</a></li>
+<li><a href="/tos" class="inlineblock0 size13 fontn color333 txtdecoration-no animate" style="color: #6B6B6B;padding-top:13px;">Terms of service</a></li>
+</ul>
+<span class="ftrcopyright absolute size13 fontn color333">&copy; 2015 Speedvid, All Rights Reserved *</span>
+<ul class="inlineblock0 sociallinks absolute">
+<li><a href="https://www.facebook.com/pages/SpeedVid/1592134247678557" TARGET="_blank" class="ftrsocialicon animate fbicon inlineblock0" title="Facebook"><img src="//neo.speedvid.net/cdn/images/button/facebook_icon.png" alt=""></a></li>
+<li><a href="https://twitter.com/Speed_Vid" TARGET="_blank" class="ftrsocialicon animate twittericon inlineblock" title="Twitter"><img src="//neo.speedvid.net/cdn/images/button/twitter_icon.png" alt=""></a></li>
+</ul>
+</div>
+<img src="//whos.amung.us/swidget/vlzjncb8t4hw.png" style="display: none">
+
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"JUS8m1a47E804B", domain:"speedvid.net",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=JUS8m1a47E804B" style="display:none" height="1" width="1" alt="" /></noscript>
+
+</BODY>
+</HTML>

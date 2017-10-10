@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-cast-api-enabled="true">
+<meta charset="utf-8">
+<title>TheVideo</title>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/images/thevideo_icon/apple-icon-57x57.png?"><link rel="apple-touch-icon" sizes="60x60" href="/images/thevideo_icon/apple-icon-60x60.png?"><link rel="apple-touch-icon" sizes="72x72" href="/images/thevideo_icon/apple-icon-72x72.png?"><link rel="apple-touch-icon" sizes="76x76" href="/images/thevideo_icon/apple-icon-76x76.png?"><link rel="apple-touch-icon" sizes="114x114" href="/images/thevideo_icon/apple-icon-114x114.png?"><link rel="apple-touch-icon" sizes="120x120" href="/images/thevideo_icon/apple-icon-120x120.png?"><link rel="apple-touch-icon" sizes="144x144" href="/images/thevideo_icon/apple-icon-144x144.png?"><link rel="apple-touch-icon" sizes="152x152" href="/images/thevideo_icon/apple-icon-152x152.png?"><link rel="apple-touch-icon" sizes="180x180" href="/images/thevideo_icon/apple-icon-180x180.png?"><link rel="icon" type="image/png" sizes="192x192" href="/images/thevideo_icon/android-icon-192x192.png?"><link rel="icon" type="image/png" sizes="32x32" href="/images/thevideo_icon/favicon-32x32.png?"><link rel="icon" type="image/png" sizes="96x96" href="/images/thevideo_icon/favicon-96x96.png?"><link rel="icon" type="image/png" sizes="16x16" href="/images/thevideo_icon/favicon-16x16.png?"><link rel="icon" type="image/x-icon" href="/images/thevideo_icon/favicon_main.ico" /><link rel="manifest" href="/images/thevideo_icon/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/images/thevideo_icon/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><meta http-equiv=Content-Type content="text-html; charset=UTF-8"><meta name="google" value="notranslate"><meta name="viewport" content="width=device-width, initial-scale=1.0" /> <meta name="description" content="Share your videos with friends, family and the world for free."><meta name="keywords" content="video, sharing, camera phone, video phone, free, upload"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="thevideo">
+<link rel="dns-prefetch" href="https://pqowedazx.bid">
+<script type="text/javascript">
+		//global variables
+		var adsShowPopup = false,
+			adblock2 = false,
+			adblock3 = false;	//adblock detecter/honeypot
+
+		var site_url = '/';	//site URL
+
+		//app global vars vars
+		var app = app||{};app.config = {};
+		app.config.version = '2.0.2';
+		app.config.site_name = "TheVideo";
+		app.config.site_url = "";
+		app.config.static_url = "/";
+		app.config.template_folder = "/app/"+app.config.version+"/templates";
+		app.config.api_url = app.config.site_url+"/api";
+		app.config.upload_url = "https://upload-test.thevideo.me";
+		app.config.subtitle_url = "https://subtitles.thevideo.me";
+		app.config.site_path = ".thevideo.me";
+		app.config.adblock_domain = "https://thevideo.io";
+
+	</script>
+<script src="/js/jspc.js?adb"></script>
+<script src="/js/adsense.js?"></script>
+<script src="/js/popup.min.js?0.001"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:300,700,300italic' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" href="/assets/g=bootstrapcss,maincss,appcss">
+
+<script src="/assets/g=jqueryjs,ph?0.004"></script>
+<script type="text/javascript">
+		popHandler._apiURI = "https://pqowedazx.bid";
+	</script>
+
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+<script>
+		this.top.location !== this.location && (this.top.location = this.location);
+
+		
+		if( (!adsShowPopup || !adblock2 || !adblock3) && (window.location.href && window.location.href.indexOf( app.config.adblock_domain ) == -1 ) ){
+			window.location.replace(app.config.adblock_domain + location.pathname + location.search);
+		}
+		
+	</script>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top navbar-tv" role="navigation">
+<div class="col-xs-12">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/"><img src="/images/logos/thevideo.me.dark.logo.small.png" style="height: 30px;"></a>
+
+
+</div>
+<div class="clear hidden-md-up"></div>
+<div class="col-lg-5 col-md-6 col-sm-4 col-xs-12 main-search-container hidden-sm-down">
+<form class="navbar-form form-search" role="search" method="GET" action="/results">
+<div class="input-group" style="width: 100%;">
+<input type="text" class="form-control" name="search_query" placeholder="Search term...">
+<div class="input-group-btn form-search ">
+<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+</div>
+</div>
+</form>
+</div>
+
+<div class="collapse navbar-collapse navbar-right" id="main-nav">
+<ul class="nav navbar-nav">
+<div class="col-xs-11 main-search-container hidden-md-up">
+<form class="navbar-form form-search" role="search" method="GET" action="/results">
+<div class="input-group" style="width: 100%;">
+<input type="text" class="form-control" name="search_query" placeholder="Search term...">
+<div class="input-group-btn form-search ">
+<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+</div>
+</div>
+</form>
+</div>
+<div class="clear"></div>
+<li>
+<a href="/upload" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Upload Videos"><em class="fa fa-fw fa-cloud-upload"></em></a>
+</li>
+<li>
+<a href="/premium"><em class="fa fa-fw fa-star"></em> Premium</a>
+</li>
+<li>
+<div class="btn-group navbar-group" role="group" aria-label="loginRegister" style="margin-top:13px;">
+<a class="btn btn-danger" type="button" href="/auth/signup">Sign Up</a>
+<a class="btn btn-primary" type="button" href="/auth/signin">Login</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container main-container">
+<div class="notification-adblock" style="padding:25px; display:none; top: 60px;position: fixed;font-size: 25px;z-index: 1000;left: 0px;width: 100%;background-color: rgba(40, 53, 61, 0.72);color: white;">
+<p class="text-center bottom-buffer">
+<em class="fa fa-fw fa-exclamation-triangle"></em> Adblock will interfere with your experience. Kindly consider disabling your adblock on our domain.
+</p>
+<p class="text-center">
+<button data-role="adblock-howto" class="btn btn-primary btn-lg">Show me how</button>
+<button class="btn btn-info btn-lg" data-role="adblock-reminder">Reminder me later</button>
+</p>
+</div>
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12">
+<style>
+
+@media screen and (min-width: 1px) and (max-width: 767px){
+    #columns[data-columns]::before {
+        content: '2 .col-xs-6';
+    }
+}
+@media screen and (min-width:768px) and (max-width: 991px){
+    #columns[data-columns]::before {
+        content: '3 .col-sm-4';
+    }
+}
+@media screen and (min-width:992px) and (max-width: 9999px){
+    #columns[data-columns]::before {
+        content: '4 .col-md-3';
+    }
+}
+body{
+    padding-top: 60px
+}
+
+#homepageAnimation{
+    width: 70% !important;
+    height: auto !important;
+}
+
+#homepageAnimation-cvs{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+</style>
+<script src="/js/thevideo/plugins/typed.js/typed.min.js"></script>
+<script>
+
+$(document).ready(function() {
+    $(".type-word").typed({strings:['<span class="text-brand">Upload</span> your content.','<span class="text-brand">Share</span> it with friends.','<span class="text-brand">Earn</span> through our <a  class="text-brand" href="/partners">partner program</a> for your views.'], typeSpeed: 45,backSpeed: 30,backDelay: 5000, loop: null});
+	new WOW().init();
+});
+
+</script>
+<script type="text/javascript" src="/js/animations/player.js"></script>
+<script type="text/javascript" src="/js/animations/homepage/animation.js?v=0.00002"></script>
+<div class="bg-theme">
+<div class="row">
+<div id="homepageAnimation"></div>
+</div>
+<div class="row">
+<h2 class="text-center"><span class="type-word"></span></h2>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div> 
+
+<footer class="footer-distributed">
+<div class="row">
+<div class="col-xs-12">
+<div class="valign">
+<div style="width:200px;">
+<img style="width: 100%" src="/images/logos/thevideo.me.dark.logo.small.png" class="responsive">
+
+</div>
+<div>
+<p class="footer-links">
+<a href="">Home</a>
+·
+<a href="/faq">FAQ</a>
+·
+<a href="/tos">Terms of service</a>
+·
+<a href="/pages/privacy.html">Privacy Policy</a>
+·
+<a href="/dmca">Copyright</a>
+·
+<a href="/?op=news">Blog</a>
+·
+<a href="/partners">Partner Program</a>
+·
+<a class="btn-contactus" href="/contact">Contact Us</a>
+
+</p>
+<p>TheVideo &copy; <script>document.write(new Date().getFullYear())</script></p>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</footer>
+
+<script src="/assets/g=mainjslibs,popjs,appjs?v=0.0001"></script>
+
+
+<link rel="stylesheet" type="text/css" href="/js/thevideo/plugins/datatables/datatables.min.css" />
+<script type="text/javascript" src="/js/thevideo/plugins/datatables/datatables.min.js?v=0.00002"></script>
+<script>
+( $.fn.dataTable || document.write( "<script type='text\/javascript' src='https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js' ><\/script>" ) )
+</script>
+<style>
+tr.group{
+	background-color: #28353d !important;
+    color: white !important;
+}
+.fixedHeader-floating{
+	top:60px !important;
+}
+</style>
+<script>
+	
+
+	//initiate user object
+	app.user.init({
+				user_id : parseInt(''),
+				user_created : '',
+				username : '',
+				type : 'auto',
+				premium : parseInt(''),
+				email : '',
+				country : 'GB',
+				ip : '138.37.90.54',
+				balance: ''
+			});
+
+	//check sandbox
+	window.fbAsyncInit=function(){FB.init({appId:"425957084198586",xfbml:!0,version:"v2.3"})},function(a,b,c){var d,e=a.getElementsByTagName(b)[0];a.getElementById(c)||(d=a.createElement(b),d.id=c,d.src="//connect.facebook.net/en_US/sdk.js",e.parentNode.insertBefore(d,e))}(document,"script","facebook-jssdk");
+	
+	$(document).ready(function(e){
+
+		app.main.init({
+				liveChat: true,
+				liveChatLoggedIn: true,
+				tawkHash: '',
+				tawkSecondaryAsset: '1al37p6gd',
+				topSearchBar: true,
+				sandboxCheck: true,
+				sandboxForceOut: true,
+				socialButtons: true,
+				adblockCheck: true,
+				adblockNotify: true, //if adblock enabled, adblock notification will appear
+				dataPicker: true,
+				bootstrap: true
+		});
+
+		//set cookies
+		
+		
+	});
+	
+	</script>
+<script type="text/javascript">
+	  var _paq = _paq || [];
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="//analytics.thevideo.me/";
+	    _paq.push(['setTrackerUrl', u+'t.php']);
+	    _paq.push(['setSiteId', 'OpvgW6E3R9PdD7rj']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'t.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+<noscript><p><img src="//analytics.thevideo.me/t.php?idsite=OpvgW6E3R9PdD7rj" style="border:0;" alt="" /></p></noscript>
+
+<div class="modal fade" id="confirmActionModal" tabindex="-1" role="dialog" aria-labelledby="confirmActionModal" aria-hidden="true">
+<div class="modal-dialog modal-sm">
+<div class="modal-content text-center">
+<h2 class="modal-header m-t-1">
+<em class="fa fa-fw fa-hand-paper-o"></em> { title }
+</h2>
+<div class="modal-body">
+<h4 rv-html="body"></h4>
+</div>
+<div class="modal-footer btn-group">
+<button type="button" rv-on-click="callback.cancel" class="btn btn-default btn-lg">Cancel</button>
+<button type="button" rv-on-click="callback.confirm" class="btn btn-primary btn-lg">Confirm</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="twoFactorAuthModal" tabindex="-1" role="dialog" aria-labelledby="twoFactorAuthModal" aria-hidden="true">
+<div class="modal-dialog modal-md">
+<div class="modal-content text-center">
+<h2 class="modal-header m-t-1">
+<em class="fa fa-fw fa-hand-paper-o"></em> { title }
+</h2>
+<div class="modal-body">
+<p class="alert alert-info">{ info }</p>
+<form class="form-inline">
+<label for="code">Authentication Code:</label>
+<div class="col-xs-12">
+<input required="required" rv-value="value.c1" type="text" class="form-control input-single-char" maxlength="1" placeholder="C">
+<input required="required" rv-value="value.c2" type="text" class="form-control input-single-char" maxlength="1" placeholder="">
+<input required="required" rv-value="value.c3" type="text" class="form-control input-single-char" maxlength="1" placeholder="O">
+<input required="required" rv-value="value.c4" type="text" class="form-control input-single-char" maxlength="1" placeholder="">
+<input required="required" rv-value="value.c5" type="text" class="form-control input-single-char" maxlength="1" placeholder="D">
+<input required="required" rv-value="value.c6" type="text" class="form-control input-single-char" maxlength="1" placeholder="">
+<input required="required" rv-value="value.c7" type="text" class="form-control input-single-char" maxlength="1" placeholder="E">
+</div>
+<div class="clear"></div>
+<p id="passwordHelpBlock" class="form-text text-muted m-t-1" rv-html="instruction">
+</p>
+<p class="form-text text-muted m-t-1">Havent received the code? <br> <button rv-on-click="resendObj.anotherone" rv-disabled="resendObj.lock" class="btn btn-info btn-xs"> <em class="fa fa-fw fa-refresh"></em> Resend verification code <span rv-if="resendObj.timer"> in <span rv-text="resendObj.timer"></span> seconds</span> </button> </p>
+</form>
+</div>
+<div class="modal-footer btn-group">
+<button type="button" rv-on-click="callback.cancel" class="btn btn-default btn-lg">Cancel</button>
+<button type="button" rv-on-click="callback.confirm" class="btn btn-primary btn-lg">Verify</button>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
