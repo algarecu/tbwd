@@ -30,9 +30,6 @@ def main():
         diff.set_seq1(get_tags(lxml.html.parse(path1)))
 
         for path2 in html_paths:
-            if path1 >= path2:
-                continue
-
             diff.set_seq2(get_tags(lxml.html.parse(path2)))
             similarity = diff.ratio() * 100
 
@@ -44,7 +41,7 @@ def main():
 
             results.append([final1,final2,similarity])
 
-    with open('similarity.csv', 'wb') as f:
+    with open('datasets/similarity.csv', 'wb') as f:
         w = csv.writer(f)
         w.writerow(['SS1', 'SS2', 'Similarity'])
         for data in results:
