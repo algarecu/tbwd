@@ -23,7 +23,9 @@ def main():
 
     total = len(html_paths)
     results = list()
+    results_threshold = list()
     results_json = list()
+    threshold = 90
 
     for i, path1 in enumerate(html_paths):
         print('%s (%d/%d)' % (path1, i+1, total))
@@ -31,6 +33,8 @@ def main():
         diff.set_seq1(get_tags(lxml.html.parse(path1)))
 
         for path2 in html_paths:
+            if path1 >= path2:
+                continue
             diff.set_seq2(get_tags(lxml.html.parse(path2)))
             similarity = diff.ratio() * 100
 
@@ -50,14 +54,24 @@ def main():
                 'similarity': similarity
             })
 
-    with open('datasets/similarity.csv', 'wb') as f:
-        w = csv.writer(f)
-        w.writerow(['SS1', 'SS2', 'Similarity'])
-        for data in results:
-            w.writerow(data)
+            # Path for .csv with threshold set to 90
+            if similarity >= threshold:
+                results_threshold.append([final1,final2,similarity])
 
-    with open('datasets/similarity.json', 'wb') as json_path:
-        json.dump(results_json, json_path, indent=4)
+    # with open('datasets/similarity.csv', 'wb') as f:
+    #     w = csv.writer(f)
+    #     w.writerow(['SS1', 'SS2', 'Similarity'])
+    #     for data in results:
+    #         w.writerow(data)
+    #
+    # with open('datasets/similarity.json', 'wb') as json_path:
+    #     json.dump(results_json, json_path, indent=4)
+
+    with open('datasets/similarity-threshold-' + str(threshold) + '.csv', 'wb') as f_threshold:
+        w = csv.writer(f_threshold)
+        w.writerow(['SS1', 'SS2', 'Similarity'])
+        for data in results_threshold:
+            w.writerow(data)
 
 def get_tags(doc):
     tags = list()
