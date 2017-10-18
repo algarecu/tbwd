@@ -23,6 +23,7 @@ def main():
 
     total = len(html_paths)
     results = list()
+    results_json = list()
 
     for i, path1 in enumerate(html_paths):
         print('%s (%d/%d)' % (path1, i+1, total))
@@ -33,6 +34,7 @@ def main():
             diff.set_seq2(get_tags(lxml.html.parse(path2)))
             similarity = diff.ratio() * 100
 
+            # Paths for .csv
             head1, tail1 = os.path.split(path1)
             head2, tail2 = os.path.split(path2)
 
@@ -41,11 +43,21 @@ def main():
 
             results.append([final1,final2,similarity])
 
+            # Paths for .json
+            results_json.append({
+                'path1': final1,
+                'path2': final2,
+                'similarity': similarity
+            })
+
     with open('datasets/similarity.csv', 'wb') as f:
         w = csv.writer(f)
         w.writerow(['SS1', 'SS2', 'Similarity'])
         for data in results:
             w.writerow(data)
+
+    with open('datasets/similarity.json', 'wb') as json_path:
+        json.dump(results_json, json_path, indent=4)
 
 def get_tags(doc):
     tags = list()
