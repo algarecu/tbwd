@@ -91,11 +91,14 @@ tkid <- tkplot(GNN,vertex.label.color="black", vertex.size=29)
 l <- tkplot.getcoords(tkid)
 tk_close(tkid, window.close = T)
 
-# Plot the SNN graph returned by SNN_GRAPH function
 pdf("~/Documents/github/tbwd/plots/community-networks-snn.pdf", width=6, height=6)
+pdfsnn <- plot(GNN, layout=l)
+dev.off()
 
+# Plot the SNN graph returned by SNN_GRAPH with Louvain function
+pdf("~/Documents/github/tbwd/plots/community-networks-snn-louvain.pdf", width=6, height=6)
 cfg_louvain_snn <- cluster_louvain(GNN)
-pdfsnn <- plot(cfg_louvain_snn, GNN)
+pdfsnnlouvain <- plot(cfg_louvain_snn, GNN)
 dev.off()
 
 # G = graph.data.frame(d = as.data.frame(MSNN), directed = FALSE)
