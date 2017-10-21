@@ -64,7 +64,7 @@ G2_domains <- graph.adjacency(expand.matrix(MSNN_domains), mode="undirected")
 Madj <- get.adjacency(G2_domains)
 
 # Calling SNN function and plotting the SNN graph returned by SNN GRAPH function.
-k<-1
+k<-4
 GNN_domains <- SNN_GRAPH(Madj, k)
 
 # Plot the SNN graph returned by SNN_GRAPH
@@ -92,7 +92,7 @@ MSNN_networks <- as.matrix(df_networks)
 networks_labels <- unique(melt(networks$source, networks$target))
 
 # Calling SNN function and plotting the SNN graph returned by SNN GRAPH function.
-k<-1
+k<-4
 GNN_networks <- SNN_GRAPH(MSNN_networks, k)
 
 # Plot the SNN graph returned by SNN_GRAPH
