@@ -6,16 +6,20 @@
 library(igraph)
 library(reshape2)
 library(Matrix)
-library(RBGL)
-library(graph)
+# library(RBGL)
+# library(graph)
+library(rgexf)
 
 # sapply(list.files(pattern="[.]R$", path="~/Documents/github/tbwd/src/Similarity/funcs/", full.names=TRUE), source);
 source("~/Documents/github/tbwd/src/Similarity/funcs/ProximityMeasure.R")
 
+# Set threshold
+threshold = 80
+
 # Read cyberlocker sites to CSV
-networks <- read.csv("~/Documents/github/tbwd/datasets/networks.csv", header=TRUE, sep=",", as.is = T)
-domains <- read.csv("~/Documents/github/tbwd/datasets/domains.csv", header=TRUE, sep=",", as.is = T)
-html <- read.csv("~/Documents/github/tbwd/datasets/html-t90.csv", header=TRUE, sep=",", as.is = T)
+networks <- read.csv("~/Documents/github/tbwd/datasets/networks-short.csv", header=TRUE, sep=",", as.is = T)
+domains <- read.csv("~/Documents/github/tbwd/datasets/domains-short.csv", header=TRUE, sep=",", as.is = T)
+html <- read.csv(file = sprintf("~/Documents/github/tbwd/datasets/html-t%s.csv", threshold), header=TRUE, sep=",", as.is = T)
 
 # nrow(unique(domains[,c("source", "target")]))
 #################################### GRAPH ###################################
@@ -31,8 +35,13 @@ links_html <-as.matrix(html[,c("source", "target")])
 net_domains <- graph_from_data_frame(d = domains, directed = FALSE)
 net_networks <- graph_from_data_frame(d = networks, directed = FALSE)
 net_html <- graph_from_data_frame(d = html, directed = FALSE)
-
 #################################### END GRAPH ####################################
+
+# Graph properties
+# V_domains <- V(net_domains)
+# E_domains <- E(net_domains)
+# degree(E_domains, V_domains, mode = "all")
+# V(net_domains)$size <- V(net_domains)$degree
 
 #################################### START DOMAINS ###############################
 G_domains <-graph.edgelist(links_domains)
@@ -119,8 +128,8 @@ MSNN_html<-as.matrix(df_html)
 # Labels for html
 html_labels <- unique(melt(html$source, html$target))
 
-MSNN_html[MSNN_html < 90] <- 0
-MSNN_html[MSNN_html > 90] <- 1
+MSNN_html[MSNN_html < threshold] <- 0
+MSNN_html[MSNN_html > threshold] <- 1
 
 # Set diagonal back to zero
 diag(MSNN_html) <- 0
@@ -136,12 +145,12 @@ k<-1
 GNN_html <- SNN_GRAPH(MSNN_html, k)
 
 # Plot the SNN graph returned by SNN_GRAPH
-pdf("~/Documents/github/tbwd/plots/community-html-t90-snn.pdf", width=10, height=10)
+pdf(file = "~/Documents/github/tbwd/plots/community-html-t" + threshold + "-snn.pdf", width=10, height=10)
 pdfsnn <- plot(GNN_html, vertex.label.color="black", vertex.label=html_labels$value)
 dev.off()
 
 html_louvain <- cluster_louvain(G1_html)
-pdf("~/Documents/github/tbwd/plots/community-html-t90-louvain.pdf", width=10, height=10)
+pdf(file = "~/Documents/github/tbwd/plots/community-html-t" + threshold + "-louvain.pdf", width=10, height=10)
 htmllouvain <- plot(html_louvain, G1_html)
 dev.off()
 
