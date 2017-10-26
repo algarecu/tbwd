@@ -1,4 +1,4 @@
-Algorithms for WWW '18. Used in the Html graphs of the paper, as well as correlation matrices.
+Algorithms for WWW '18. Used in the Html graphs of "Paper", as well as correlation matrices.
 
 # Web structure similarity calculation using three methods:
 To understand the specific meaning of each method, see the paper from [Gottron],
