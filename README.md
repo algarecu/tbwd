@@ -1,4 +1,4 @@
-Algorithms for WWW '18. Used in the Html graphs of "Paper", as well as correlation matrices.
+Algorithms for page similarity in WWW '18. Used in the Html graphs of the "Paper". Additionally, freebies are the correlation matrices/heatmaps.
 
 # Web structure similarity calculation using three methods:
 To understand the specific meaning of each method, see the paper from [Gottron],
@@ -11,7 +11,8 @@ possible tags is limited.
 
 ## LCTS
 - [x] The longest public tag sub-sequence method uses the distance of two documents
-expressed based on their longest common tag subsequence.
+expressed based on their longest common tag subsequence. 
+Code extracted from https://github.com/TeamHG-Memex/page-compare and adapted to input/crawler by @algarecu.
 
 ## CTSS
 - [ ] The public tag sequence shingle method. Useful to overcome the computational costs of
