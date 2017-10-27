@@ -12,7 +12,7 @@ possible tags is limited.
 ## LCTS
 - [x] The longest public tag sub-sequence method uses the distance of two documents
 expressed based on their longest common tag subsequence. 
-Code extracted from https://github.com/TeamHG-Memex/page-compare and adapted to input/crawler by @algarecu.
+Code extracted from https://github.com/TeamHG-Memex/page-compare and adapted to input/crawler and output json/csv by @algarecu.
 
 ## CTSS
 - [ ] The public tag sequence shingle method. Useful to overcome the computational costs of
