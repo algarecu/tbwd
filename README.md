@@ -10,9 +10,9 @@ converts the document D in a vector v(D) of fixed dimension N as the number of
 possible tags is limited.
 
 ## LCTS
-- [x] The longest public tag sub-sequence method uses the distance of two documents
-expressed based on their longest common tag subsequence. 
-Code extracted from https://github.com/TeamHG-Memex/page-compare and adapted to input/crawler and output json/csv by @algarecu.
+- [x] The Longest Common Tag sub-Sequence method uses the distance of two documents expressed based on their longest common tag subsequence. Note that we use difflib's SequenceMatcher to find any contiguous matching blocks from the two sequences and then calculate the longest sequence of tags that appear in the same order in both original sequences.
+
+Some of the code is extracted from https://github.com/TeamHG-Memex/page-compare and adapted to our input format requirements. Crawler (crawler.py) and output to json/csv by @algarecu, P-R (score-compare-tags.py) corrected from original.
 
 ## CTSS
 - [ ] The public tag sequence shingle method. Useful to overcome the computational costs of
