@@ -1,4 +1,4 @@
-Algorithms for page similarity in WWW '18. Used in the Html graphs of the "Paper". Additionally, freebies are the correlation matrices/heatmaps.
+Algorithms for page HTML similarity in the paper, "Movie Pirates of the Caribbean: Exploring Illegal Streaming Cyberlockers". Additionally, freebies are the correlation matrices/heatmaps.
 
 # Web structure similarity calculation using three methods:
 To understand the specific meaning of each method, see the paper from [Gottron],
