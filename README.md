@@ -1,10 +1,8 @@
-Algorithms for page HTML similarity in the paper: 
-
-"Movie Pirates of the Caribbean: Exploring Illegal Streaming Cyberlockers"
-The 12th International AAAI Conference on Web and Social Media (ICWSM)
+** "Movie Pirates of the Caribbean: Exploring Illegal Streaming Cyberlockers"  
+The 12th International AAAI Conference on Web and Social Media (ICWSM)  
 [pdf](https://arxiv.org/pdf/1804.02679)
 
-Additionally, freebies are the correlation matrices/heatmaps.
+Algorithms for page HTML similarity in the paper above. Additionally, freebies are the correlation matrices/heatmaps.
 
 # Web structure similarity calculation using three methods:
 To understand the specific meaning of each method, see the paper from [Gottron],
