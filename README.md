@@ -1,4 +1,4 @@
-** "Movie Pirates of the Caribbean: Exploring Illegal Streaming Cyberlockers"  
+***Movie Pirates of the Caribbean: Exploring Illegal Streaming Cyberlockers 
 The 12th International AAAI Conference on Web and Social Media (ICWSM)  
 [pdf](https://arxiv.org/pdf/1804.02679)
 
