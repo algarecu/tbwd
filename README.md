@@ -1,6 +1,6 @@
 **Movie Pirates of the Caribbean: Exploring Illegal Streaming Cyberlockers**   
 The 12th International AAAI Conference on Web and Social Media (ICWSM)  
-[pdf](https://arxiv.org/pdf/1804.02679)
+[pdf](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM18/paper/viewFile/17835/17004)
 
 The algorithms for page HTML similarity used the paper above and additionally, freebies are the correlation matrices/heatmaps:
 
