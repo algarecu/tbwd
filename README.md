@@ -2,7 +2,7 @@
 The 12th International AAAI Conference on Web and Social Media (ICWSM)  
 [pdf](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM18/paper/viewFile/17835/17004)
 
-The algorithms for page HTML similarity used the paper above and additionally, freebies are the correlation matrices/heatmaps:
+This repository contains the algorithms for pages' HTML similarity that we used in the technical paper and additionally, freebies are the correlation matrices/heatmaps.
 
 # Web structure similarity calculation using three methods:
 To understand the specific meaning of each method, see the paper from [Gottron],
@@ -21,6 +21,3 @@ Some of the code is extracted from https://github.com/TeamHG-Memex/page-compare 
 ## CTSS
 - [ ] The public tag sequence shingle method. Useful to overcome the computational costs of
 the previous distance techniques, as this method uses shingles.
-
-Contact:
-algarecu@gmail.com
